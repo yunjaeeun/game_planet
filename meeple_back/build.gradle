@@ -1,0 +1,97 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.meeple'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // spring-boot
+
+    // 테스트용 h2 데이터베이스
+    implementation 'com.h2database:h2:2.1.214'
+    // 잭슨 데이터타입
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+
+    // jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // web-socket
+//    implementation 'org.springframework.boot:spring-boot-starter-messaging'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework:spring-messaging' // 메시징 핵심 라이브러리
+    implementation 'org.springframework:spring-websocket' // WebSocket 지원
+
+    // my-sql
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // lombok
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+
+    // security
+    implementation 'org.springframework.security:spring-security-crypto:6.4.2'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    testImplementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // jwt
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // openVidu
+    implementation 'io.openvidu:openvidu-java-client:2.22.0'
+
+    // mapper
+    implementation 'org.modelmapper:modelmapper:3.1.0'
+
+    // Springdoc OpenAPI
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
+
+    // aws S3
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.510'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+}
+
+bootJar {
+    archiveBaseName.set('meeple_back') // 기본 이름 설정
+    archiveVersion.set('')
+    archiveClassifier.set('')
+    archiveFileName.set('meeple_back.jar') // Gradle 버전에 따라 사용 가능
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

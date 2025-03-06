@@ -1,0 +1,5 @@
+package com.meeple.meeple_back.game.bluemarble.domain;
+
+public enum TileType {
+	START, SEED_CERTIFICATE_CARD, TELEPATHY_CARD, NEURONS_VALLEY_CARD, TIME_MACHINE, HALLEYS_COMET, BLACK_HOLE, TIME_TRAVEL, SPACE_AGENCY
+}
