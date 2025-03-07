@@ -153,7 +153,7 @@
 
 ## 👨‍👩‍👧‍👦 멤버 소개
 
-![alt text](readMeImages/TeamIntroduce.png)
+![alt text]()
 
 ## 느낀 점
 
