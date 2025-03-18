@@ -73,31 +73,19 @@
 
 - ### 시스템 아키텍처
 
-  ![alt text](readMeImages/SystemArchitecture.png)
-
 - ### DB 설계 (ERD)
-
-  ![alt text](readMeImages/ERD.png)
 
 - ### API 설계
 
 - ### WBS
 
-  ![alt text](readMeImages/WBS.png)
-
 - ### 요구사항 명세서
-  ![alt text](readMeImages/require.png)
 
 ## ✅ 주요 기능
 
 ### 00. 접속 화면
 
-![alt text](readMeImages/MainPage.gif)
-
 ### 01. 회원가입, 로그인
-
-![alt text](readMeImages/SignUp.gif)
-![alt text](readMeImages/LogIn.gif)
 
 #### `회원가입`
 
@@ -112,7 +100,6 @@
 
 ### 02. AI 욕설 감지 Meeple 앱
 
-![alt text](readMeImages/MeepleApp.gif)
 
 - #### 프로그램을 설치하지 않으면 게임방 생성 및 입장이 불가
 - #### Meeple 로그인 후 입장 가능
@@ -128,15 +115,12 @@
 
 ### 04. 게임 커스텀
 
-![alt text](readMeImages/Custom.gif)
-
 - #### 부루마불에서 이용할 보드판 커스텀 가능
 - #### 보드판 커스텀 후 관리자에게 승인 요청을 전송
 - #### 관리자가 승인을 하면 부루마불 게임 전 커스텀 보드판 사용 가능
 
 ### 05. 부루마불
 
-![alt text](readMeImages/Burumabul.gif)
 
 - #### 커스텀된 보드판을 대기방에서 선택 가능
 - #### 게임 입장하면 커스텀된 사진과 마불(재화)이 적용
